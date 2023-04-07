@@ -49,6 +49,13 @@ return {
     servers = {
       -- "pyright"
     },
+    -- Fix warning: "multiple different client offset_encodings detected for buffer, this is not supported yet"
+    -- Ref: https://github.com/AstroNvim/AstroNvim/issues/1013#issuecomment-1468546749
+    config = {
+      clangd = {
+        capabilities = { offsetEncoding = "utf-8" }
+      }
+    }
   },
   -- Configure require("lazy").setup() options
   lazy = {
