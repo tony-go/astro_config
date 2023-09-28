@@ -25,6 +25,15 @@ return {
     ["<leader>s"] = { ":w!<cr>", desc = "Save File" },
     -- close tab
     ["<leader>w"] = { ":q<cr>", desc = "Close File" },
+    ["<leader>t"] = {
+      function()
+        if (jit.os == "OSX") then
+          local dn = require('dark_notify')
+          dn.toggle()
+        end
+      end,
+      desc = "Toggle Dark Mode"
+    },
   },
   t = {
     -- setting a mapping to false will disable it

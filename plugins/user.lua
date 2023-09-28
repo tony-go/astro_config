@@ -17,5 +17,17 @@ return {
     keys = {
       { "<leader>to", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" }
     }
-  }
+  },
+  jit.os == "OSX" and {
+    "cormacrelf/dark-notify",
+    event = "ColorScheme",
+    config = function()
+      require("dark_notify").run {
+        schemes = {
+          light = "rose-pine-dawn",
+          dark = "rose-pine-main",
+        },
+      }
+    end,
+  },
 }
