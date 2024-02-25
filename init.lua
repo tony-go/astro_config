@@ -33,7 +33,7 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          "css", "html", "in"
+          "css", "html", "in.js"
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
